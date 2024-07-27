@@ -11,7 +11,7 @@ By Mechalvent Team:
 -Azman Zidni Fadhillah (Hardware Engineer)
 -Aqsha Rezqha Endhisza Siregar (APP Developer)
 -Huda Nur Ihsan Muhammad Akbar (UI/UX Designer)
--Muhammad Fikri Anwari (Software Engineer)
+-Muhammad Fikri Anwari (Software/IoT Engineer)
 
 
 
