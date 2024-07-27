@@ -8,7 +8,7 @@ WEBAPP : https://bioner-s.streamlit.app/
 
 
 By Mechalvent Team:
--Azman Zidni Fadhillah (Hardwre Engineer)
+-Azman Zidni Fadhillah (Hardware Engineer)
 -Aqsha Rezqha Endhisza Siregar (APP Developer)
 -Huda Nur Ihsan Muhammad Akbar (UI/UX Designer)
 -Muhammad Fikri Anwari (Software Engineer)
