@@ -6,7 +6,7 @@ import numpy as np
 import time
 from PIL import Image
 from sklearn.linear_model import LinearRegression
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 
@@ -41,11 +41,11 @@ dataset.columns = dataset.columns.str.replace('[', '').str.replace(']', '')
 
 # Konversi ke dictionary
 DicDataset = {
-    'Suhu air': dataset['suhu air'].values[:-3],
-    'Suhu api': dataset['suhu api'].values[:-3],
-    'Tekanan': dataset['tekanan(bar)'].values[:-3],
-    'Bukaan Katup': dataset['bukaan katup'].values[:-3],
-    'Tegangan': dataset['tegangan(V)'].values[:-3]
+    'Suhu air': dataset['suhu air'].values[:61],
+    'Suhu api': dataset['suhu api'].values[:61],
+    'Tekanan': dataset['tekanan(bar)'].values[:61],
+    'Bukaan Katup': dataset['bukaan katup'].values[:61],
+    'Tegangan': dataset['tegangan(V)'].values[:61]
 }
 train_dataset_df = pd.DataFrame(DicDataset)
 
@@ -54,7 +54,7 @@ X_train = np.array(train_dataset_df[['Suhu air', 'Suhu api', 'Tekanan', 'Bukaan 
 y_train = np.array(train_dataset_df['Tegangan'])
 
 # Training model
-model = RandomForestClassifier(n_estimators=1000, random_state=42)
+model = RandomForestRegressor(n_estimators=1000, random_state=42)
 model.fit(X_train, y_train)
 
 model2 = LinearRegression()
